@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true  # Needed to push back
 
       - name: Run PowerShell script # a github actions scripting action
         shell: pwsh
